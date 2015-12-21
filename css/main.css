@@ -87,7 +87,15 @@
     font-weight: 700;
     line-height: 80px;
     letter-spacing: -1.6px;
-    margin-bottom: 23px;
+    margin-bottom: 54px;
+}
+.block-descr{
+    font-size: 24px;
+    width: 640px;
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 100;
 }
 .block-title:after{
     content: "";
