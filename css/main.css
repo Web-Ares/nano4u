@@ -51,7 +51,6 @@
     display: block;
     clear: both;
     width: 100%;
-
     height: 100px;
 }
 .site__content {
@@ -60,11 +59,9 @@
 }
 .site__header {
     position: relative;
-
     height: 100px;
     background: red;
     z-index: 3;
-
 }
 .site__footer {
     z-index: 2;
@@ -80,14 +77,27 @@
     height: 100px;
     background: blue;
 }
-.site-title{
-    font-size: 60px;
+.block-title{
+    font-family: 'Roboto Black', sans-serif;
+    position: relative;
+    font-size: 36px;
     text-transform: uppercase;
     text-align: center;
-    padding: 30px 0;
-    color: #bc041d;
-    font-weight: 400;
-    line-height: 76px;
+    color: #010101;
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: -1.6px;
+    margin-bottom: 23px;
+}
+.block-title:after{
+    content: "";
+    position: absolute;
+    width: 102px;
+    height: 1px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -51px;
+    background: #2d4b9b;
 }
 /* --------------- /site --------------- */
 
@@ -162,15 +172,67 @@ a, a:hover, a:focus {
 }
 /* --------------- /btn --------------- */
 
+/* --------------- what-problems --------------- */
+.what-problems{
 
+}
+/* --------------- /what-problems --------------- */
+
+/* --------------- what --------------- */
+.what{
+
+}
+/* --------------- /what --------------- */
+
+/* --------------- how-does --------------- */
+.how-does{
+
+}
+/* --------------- /how-does --------------- */
 @media (min-width: 768px){
     /* --------------- site --------------- */
 
     /* --------------- /site --------------- */
+
+    /* --------------- what-problems --------------- */
+    .what-problems{
+
+    }
+    /* --------------- /what-problems --------------- */
+
+    /* --------------- what --------------- */
+    .what{
+
+    }
+    /* --------------- /what --------------- */
+
+    /* --------------- how-does --------------- */
+    .how-does{
+
+    }
+    /* --------------- /how-does --------------- */
 }
 
 @media (min-width: 1024px){
     /* --------------- site --------------- */
 
     /* --------------- /site --------------- */
+
+    /* --------------- what-problems --------------- */
+    .what-problems{
+
+    }
+    /* --------------- /what-problems --------------- */
+
+    /* --------------- what --------------- */
+    .what{
+
+    }
+    /* --------------- /what --------------- */
+
+    /* --------------- how-does --------------- */
+    .how-does{
+
+    }
+    /* --------------- /how-does --------------- */
 }
