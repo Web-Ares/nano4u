@@ -42,7 +42,7 @@
     display: block;
     clear: both;
     width: 100%;
-    height: 100px;
+    height: 222px;
 }
 .site__content {
     position: relative;
@@ -61,13 +61,29 @@
     left: 0;
     right: 0;
     bottom: 0;
-    height: 100px;
+    height: 222px;
 }
 .site__footer-layout {
+    position: relative;
+    max-width: 1911px;
+    margin: 0 auto;
+    font-family:'Roboto Light', sans-serif;
     width: 100%;
-
-    height: 100px;
-    background: blue;
+    height: 222px;
+    background: #fff;
+    text-align: center;
+    padding-top: 51px;
+    box-shadow: inset 0 3px 30px #cbcbcb;
+}
+.site__footer-layout span{
+    display: block;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+.site__footer-layout a{
+    font-size: 24px;
+    color: #000;
+    text-decoration: underline;
 }
 .block-title{
     font-family: 'Roboto Black', sans-serif;
@@ -486,6 +502,7 @@ a {
     max-width: 1010px;
     height: 55px;
     margin: 0 auto;
+    margin-bottom: 15px;
 }
 .how-does__consumption div{
     padding-left: 6px;
@@ -549,11 +566,15 @@ a {
     position: relative;
     max-width: 1010px;
     margin: 0 auto;
+    text-align: center;
 }
 .how-does__price>div{
     display: inline-block;
     vertical-align: top;
-    width: 49.7%;
+    width: 300px;
+}
+.how-does__price>div:last-child{
+    box-shadow: 0 0 10px #000;
 }
 .how-does__price>div p{
     color:#000;
@@ -569,12 +590,14 @@ a {
     padding: 0;
     width: 50%;
     float: left;
-    height: 254px;
+    height: 125px;
     background-position: center;
     background-size: cover;
 }
 .how-does__price>div .price-new{
     width: 309px;
+    height: inherit;
+    margin-bottom: 30px;
 }
 .price-new span{
     color:#000;
@@ -749,7 +772,217 @@ a {
 }
 /* --------------- /site__header --------------- */
 
+/* --------------- /site__header --------------- */
+.profitably{
+    position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.profitably__wrap{
+    position: relative;
+    width: 100%;
+    display: table;
+}
+.profitably__wrap:before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    margin-left: -95px;
+    bottom: 145px;
+    width: 190px;
+    height:190px;
+    border: 3px solid #ffde18;
+    border-radius: 50%;
+    background: #ee9b0e;
+}
+.profitably__wrap:after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    margin-left: -225px;
+    bottom: 95px;
+    width: 451px;
+    height:451px;
+    background: url("../img/profitably-icon.png") no-repeat center;
+    background-size:contain;
+}
+.profitably__item{
+    padding-top: 30px;
+    width: 50%;
+    display: table-row;
+    vertical-align: top;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.profitably__item p{
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px;
+    width: 474px;
+    padding-left: 53px;
+}
+.profitably__bad li,
+.profitably__good li{
+    position: relative;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 36px;
+    padding-left: 50px;
+    white-space: pre-line;
+}
+.profitably__bad{
+    position: relative;
+    width: 500px;
+    float: right;
+    margin-bottom: 250px;
+}
+.profitably__good{
+    position: relative;
+    width: 450px;
+    margin-bottom: 250px;
+}
+.profitably__good:after,
+.profitably__bad:after{
+    content: "";
+    bottom: -125px;
+    left: 50%;
+    margin-left: -18px;
+    width: 37px;
+    height: 93px;
+    position: absolute;
+    background: url("../img/profitably-arrow.png") no-repeat center;
+}
+.profitably__bad li:before{
+    content: "";
+    top: -7px;
+    left: 10px;
+    width: 35px;
+    height:35px;
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    
+}
+.profitably__bad li:after{
+    content: "";
+    width: 20px;
+    height: 19px;
+    top: 2px;
+    left: 17px;
+    position: absolute;
+    background: url("../img/profitably-bad.png") no-repeat center;
+    background-size: contain;
+}
+.profitably__good li:before{
+    content: "";
+    width: 35px;
+    height:35px;
+    top: -7px;
+    left: 10px;
+    position: absolute;
+    background: #f9c800;
+    border-radius: 50%;
+    border: 3px solid #ffdb02;
+}
+.profitably__good li:after{
+    content: "";
+    width: 27px;
+    top: 6px;
+    left: 18px;
+    height: 19px;
+    position: absolute;
+    background: url("../img/profitably-good.png") no-repeat center;
+    background-size: contain;
+}
+/* --------------- /site__header --------------- */
+
+/* --------------- order --------------- */
+.order{
+    position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.order__item {
+    height: 87px;
+    text-align: center;
+}
+.order__wrap ul .order__item:nth-child(even){
+    background:#ffc001;
+}
+.order__wrap ul .order__item:nth-child(odd){
+    background:#2356a4;
+}
+.order__item div{
+    text-align: center;
+}
+.order__item div img {
+    width: 60px;
+    padding-top: 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.order__item div span {
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    font-size: 18px;
+    margin: 0 5px;
+}
+.order__item div p{
+    max-width: 180px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 13px;
+    text-align: left;
+    color:#fff
+}
+/* --------------- /order --------------- */
+
+/* --------------- question --------------- */
+.question{
+    position: relative;
+    text-align: center;
+    background: url("../img/question-bg.png")no-repeat;
+    background-position: 22% 113px;
+    padding-bottom: 80px;
+}
+.question-feedback ul{
+    font-family: 'Roboto Light', sans-serif;
+    display: block;
+    margin-top: 20px;
+}
+.question-feedback ul li a{
+    color: #000;
+    margin-left: 10px;
+}
+.question-feedback ul li{
+    font-size: 17px;
+    color: #000;
+    padding-bottom: 25px;
+}
+/* --------------- /question --------------- */
+
 @media (min-width: 768px){
+
+    /* --------------- order --------------- */
+    .order__item div span{
+        font-size: 36px;
+        margin: 0 21px;
+    }
+    .order__item div p{
+        max-width: 470px;
+        font-size: 24px;
+    }
+    .order__item div img {
+        padding-top: 10px;
+        width: inherit;
+        height: inherit;
+    }
+    .order__item {
+        height: 198px;
+    }
+    /* --------------- /order --------------- */
 
     /* --------------- site__header --------------- */
     .site__header {
@@ -774,6 +1007,9 @@ a {
     .header-title span:last-child {
         font-size: 18px;
         line-height: 26px;
+    }
+    .site__footer-layout span {
+        font-size: 24px;
     }
     .call {
         width: initial;
@@ -841,6 +1077,16 @@ a {
     /* --------------- /what --------------- */
 
     /* --------------- how-does --------------- */
+    .how-does__price>div {
+        width: 375px;
+    }
+    .how-does__price>div>div {
+        height: 200px;
+    }
+    .how-does__price>div p {
+        text-align: left;
+    }
+
     .how-does{
 
     }
@@ -925,9 +1171,29 @@ a {
         right: -39px;
     }
     /* --------------- /how-does --------------- */
+
+    /* --------------- question --------------- */
+    .question-feedback ul li {
+        font-size: 24px;
+    }
+    .question {
+        background-position: 100% 120px;
+    }
+    /* --------------- /question --------------- */
 }
 
 @media (min-width: 1024px) {
+    /* --------------- order --------------- */
+    .order {
+        margin-bottom: 70px;
+    }
+    .order__wrap ul .order__item:nth-child(even) div{
+        padding-left: 250px;
+    }
+    .order__wrap ul .order__item:nth-child(odd) div{
+        padding-right: 250px;
+    }
+    /* --------------- /order --------------- */
 
     /* --------------- menu --------------- */
     .menu {
@@ -986,7 +1252,21 @@ a {
     .how-does {
 
     }
-
+    .how-does__consumption {
+        margin-bottom: 98px;
+    }
+    .how-does__price>div {
+        width: 475px;
+    }
+    .how-does__price>div>div {
+        height: 255px;
+    }
+    .how-does__price>div:first-child {
+        padding-right:8px;
+    }
+    .how-does__price>div .price-new {
+        margin-bottom: 130px;
+    }
     .how-does__wrap {
         background-size: 626px 474px;
     }
@@ -1083,4 +1363,13 @@ a {
         right: -39px;
         /* --------------- /how-does --------------- */
     }
+
+    /* --------------- profitably__item--------------- */
+    .profitably__item {
+        display: table-cell;
+    }
+    .profitably__wrap {
+        margin-bottom: 100px;
+    }
+    /* --------------- /profitably__item --------------- */
 }
