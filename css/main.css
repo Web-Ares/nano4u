@@ -28,15 +28,6 @@
 }
 /* --------------- /placeholder --------------- */
 
-/* --------------- fonts --------------- */
-@font-face {
-    font-family: "Font Name";
-    src: url("../fonts/font.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-/* --------------- /fonts --------------- */
-
 /* --------------- site --------------- */
 .site {
     font-family:'Roboto', sans-serif;
@@ -59,9 +50,10 @@
 }
 .site__header {
     position: relative;
-    height: 100px;
-    background: red;
+    height: 125px;
     z-index: 3;
+    max-width: 1005px;
+    margin: 0 auto;
 }
 .site__footer {
     z-index: 2;
@@ -78,14 +70,14 @@
     background: blue;
 }
 .block-title{
-    font-family: 'Roboto Black', sans-serif;
+    font-family: 'Roboto', sans-serif;
     position: relative;
-    font-size: 36px;
+    font-size: 18px;
     text-transform: uppercase;
     text-align: center;
     color: #010101;
     font-weight: 700;
-    line-height: 80px;
+    line-height: 40px;
     letter-spacing: -1.6px;
     margin-bottom: 54px;
 }
@@ -113,20 +105,20 @@
 .logo {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 6px;
+}
+.logo img{
+    width: 50px;
+    height: auto;
 }
 /* --------------- /logo --------------- */
 
 /* --------------- btn --------------- */
-a, a:hover, a:focus {
-    color: #fff;
+a, a:visited, a:hover, a:focus, a:active {
     text-decoration: none;
-    outline: 0;
-    -o-transition: all .3s;
-    -moz-transition: all .3s;
-    -webkit-transition: all .3s;
-    -ms-transition: all .3s;
-    transition: all .3s;
+}
+a {
+    background: transparent;
 }
 .btn {
     display: inline-block;
@@ -181,9 +173,70 @@ a, a:hover, a:focus {
 }
 /* --------------- /btn --------------- */
 
+/* --------------- site__header --------------- */
+.header-title {
+    width: 290px;
+    margin-left: 67px;
+    padding-top: 7px;
+    margin-bottom: 17px;
+}
+.header-title span:first-child {
+    display: block;
+    color: #155392;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.header-title span:last-child {
+    display: block;
+    font-size: 13px;
+    color: #000;
+}
+/* --------------- /site__header--------------- */
+
 /* --------------- what-problems --------------- */
 .what-problems{
-
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+}
+.what-problems__item{
+    display: inline-block;
+    vertical-align: top;
+    width: 223px;
+    text-align: center;
+    margin: 0 20px 20px 20px;
+}
+.what-problems__title{
+    text-align: center;
+    display: inline-block;
+    background: #ffc001;
+    border-radius: 5px;
+    padding: 6px;
+    margin-bottom: 15px;
+}
+.what-problems__title span:first-child {
+    font-size:24px;
+    font-weight: 700;
+}
+.what-problems__title span:last-child {
+    display: block;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.what-problems__item p{
+    font-size: 18px;
+    line-height: 24px;
+}
+.what-problems__pic{
+    padding: 0;
+    width: 100%;
+    height: 260px;
+    border-radius: 5px;
+    margin-bottom: 21px;
+    background-position: center;
+    background-size: cover;
 }
 /* --------------- /what-problems --------------- */
 
@@ -198,10 +251,199 @@ a, a:hover, a:focus {
 
 }
 /* --------------- /how-does --------------- */
+.menu.active .menu__btn > span {
+    background: transparent;
+}
+.menu.active .menu__btn > span:before {
+    transform: rotate(45deg);
+    bottom: 0;
+}
+.menu.active .menu__btn > span:after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 13px;
+    font-family: "Open Sans", "sans-serif";
+}
+.menu__btn {
+    border: none;
+    padding: 0;
+    position: absolute;
+    top: 30px;
+    right: 15px;
+    width: 23px;
+    height: 23px;
+    background: none;
+}
+.menu__btn > span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #2d4b9b;
+    position: relative;
+    border-radius: 2px;
+}
+.menu__btn > span:before, .menu__btn > span:after {
+    display: block;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    background: #2d4b9b;
+    left: 0;
+    content: '';
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    border-radius: 2px;
+}
+.menu__btn > span:before {
+    bottom: 230%;
+}
+.menu__btn > span:after {
+    top: 230%;
+}
+.menu__wrap {
+    position: absolute;
+    top: 66px;
+    left: 100%;
+    cursor: default;
+    -webkit-transition: margin .3s ease;
+    transition: margin .3s ease;
+    width: 230px;
+    background: #fff;
+    border-bottom: 1px solid #000;
+}
+.menu a, .menu a:visited {
+    font-size: 13px;
+    color: #000;
+    display: block;
+    text-transform: uppercase;
+    -webkit-transition: color .3s ease;
+    transition: color .3s ease;
+    border-top: 1px solid #000;
+    padding: 10px 10px;
+}
+.menu.active .menu__wrap {
+    margin-left: -230px;
+}
+.menu__wrap a:hover {
+    color:#2d4b9b;
+    text-decoration: underline;
+}
+.call__print {
+    display: inline-block;
+    vertical-align: middle;
+    left: 5px;
+    background: #ecf0f3;
+    border-radius: 5px;
+    padding: 10px 12px 10px 12px;
+    color: #000;
+    letter-spacing: -1px;
+    transition: box-shadow .3s ease;
+}
+.call__print span{
+    border-bottom: 1px dotted #000;
+}
+.call__print:hover {
+    box-shadow: 0 0 10px #000;
+}
+.call{
+    position: relative;
+    width: 320px;
+    font-size: 20px;
+    bottom: 0;
+}
+.call__message{
+    display: inline-block;
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+    background: url("../img/header-phone.png") no-repeat center;
+    background-size: contain;
+}
+.call__phone{
+    display: inline-block;
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+    background: url("../img/header-phone1.png") no-repeat center;
+    background-size: contain;
+}
+.call__number{
+    display: inline-block;
+    vertical-align:middle;
+}
+.call__phone:hover {
+    background: url("../img/header-phone1_h.png") no-repeat center;
+    background-size: contain;
+}
+.call__message:hover {
+    background: url("../img/header-phone_h.png") no-repeat center;
+    background-size: contain;
+}
 @media (min-width: 768px){
-    /* --------------- site --------------- */
+    .site__header {
+        height: 150px;
+    }
+    .header-title{
+        width: 290px;
+        margin-left: 152px;
+        padding-top: 17px;
+        margin-bottom: 10px;
+    }
+    .header-title span:first-child{
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .header-title span:last-child{
+        font-size:18px;
+    }
+    .call {
+        width: 600px;
+        font-size: 24px;
+        padding-left: 150px;
+    }
+    .call__phone,
+    .call__message{
+        width: 36px;
+        height: 37px;
+    }
+    .call a{
+        margin-right: 10px;
+    }
+    /* --------------- menu --------------- */
+    .menu__wrap {
+        top: 100px;
+    }
 
+    .menu__btn {
+        top: 50px;
+        width: 40px;
+        height: 40px;
+    }
+    .menu__btn > span:before {
+        bottom: 300%;
+    }
+    .menu__btn > span:after {
+        top: 300%;
+    }
+    /* --------------- /menu --------------- */
+
+    /* --------------- site --------------- */
+    .block-title {
+        font-size: 36px;
+        line-height: 80px;
+    }
     /* --------------- /site --------------- */
+
+    /* --------------- logo --------------- */
+    .logo img{
+        width: 100%;
+    }
+    /* --------------- /logo --------------- */
 
     /* --------------- what-problems --------------- */
     .what-problems{
@@ -223,6 +465,50 @@ a, a:hover, a:focus {
 }
 
 @media (min-width: 1024px){
+
+    /* --------------- menu --------------- */
+    .menu {
+        top: 85px;
+    }
+    .menu__btn {
+        display: none;
+    }
+    .menu__wrap {
+        left: auto;
+        top: 37px;
+        background: transparent;
+        width: 852px;
+        text-align: justify;
+        position: relative;
+        border: none;
+    }
+    .menu a {
+        display: inline-block;
+        vertical-align: top;
+        padding: 0;
+        border: none;
+    }
+    .menu__wrap:after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+    }
+    .site__header {
+        height: 209px;
+    }
+    .call {
+        position: absolute;
+        right: 0;
+        top: 28px;
+        width: inherit;
+    }
+    .menu a{
+        text-decoration: underline;
+    }
+    .menu__wrap {
+        padding-right: 130px;
+    }
+    /* --------------- /menu --------------- */
     /* --------------- site --------------- */
 
     /* --------------- /site --------------- */
