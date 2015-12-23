@@ -124,7 +124,7 @@
 /* --------------- logo --------------- */
 .logo {
     position: absolute;
-    top: 0;
+    top: 19px;
     left: 6px;
 }
 .logo img{
@@ -141,6 +141,7 @@ a {
     background: transparent;
 }
 .btn {
+    font-size: 26px;
     display: inline-block;
     vertical-align: middle;
     -webkit-transform: translateZ(0);
@@ -149,18 +150,18 @@ a {
     backface-visibility: hidden;
     -moz-osx-font-smoothing: grayscale;
     position: relative;
-    background: -webkit-linear-gradient(top,  #ffe300 0%,#ea8700 100%);
-    background: linear-gradient(to bottom,  #ffe300 0%,#ea8700 100%);
+    background: -webkit-linear-gradient(top, #ffe300 0%,#ea8700 100%);
+    background: linear-gradient(to bottom, #ffe300 0%,#ea8700 100%);
     -webkit-transition-property: color;
     transition-property: color;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
-    padding: 10px 20px;
+    padding: 13px 43px;
     cursor: pointer;
     text-decoration: none;
     color: #fff;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
-    border: 1px solid #ffdb00;
+    border: 3px solid #ffdb00;
     border-radius: 7px;
 }
 .btn:before {
@@ -171,7 +172,6 @@ a {
     bottom: 0;
     left: 0;
     right: 0;
-
     background: -webkit-linear-gradient(top,  #ea8700 0%,#ffe300 100%);
     background: linear-gradient(to bottom,  #ea8700 0%,#ffe300 100%);
     -webkit-transform: scaleY(0);
@@ -184,7 +184,7 @@ a {
     transition-duration: 0.3s;
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
-    border-radius: 7px;
+    border-radius: 4px;
 }
 .btn:hover, .btn:focus, .btn:active {
     color: white;
@@ -222,15 +222,17 @@ a {
     position: relative;
     margin: 0 auto;
     overflow: hidden;
+    margin-bottom: 14px;
 }
 .slider__ban{
     position: absolute;
     top: 0;
-    width: 1010px;
+    width: 506px;
     height: 576px;
     left: 50%;
     margin-left: -505px;
     z-index: 4;
+    display: none;
 }
 .ban__item{
     position: absolute;
@@ -239,7 +241,7 @@ a {
     width: 424px;
     height: 576px;
     background: rgba(196, 196, 195, 0.87);
-    padding-top: 30px;
+    padding: 22px 15px 0 15px;
     text-align: center;
     z-index: 3;
 }
@@ -247,12 +249,13 @@ a {
     display: block;
     font-family: 'Roboto Light', sans-serif;
     font-size: 18px;
-    line-height: 25px;
+    line-height: 19px;
     margin-bottom: 16px;
 }
 .ban__item h2{
     font-size: 36px;
-    margin-bottom: 20px;
+    line-height: 46px;
+    margin-bottom: 7px;
     font-family: 'Roboto Black', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
@@ -261,7 +264,8 @@ a {
     font-size: 20px;
     font-family: 'Roboto Black', sans-serif;
     font-weight: 700;
-    margin-bottom: 24px;
+    margin-bottom: 10px;
+    padding: 0 20px;
 }
 .slider__ban-pic{
     display: block;
@@ -270,7 +274,7 @@ a {
     height: 250px;
     background-position: center;
     background-repeat: no-repeat;
-    margin-bottom: 13px;
+    margin-bottom: 18px;
 }
 .slider__ban-pic div{
     transform: rotate(15deg);
@@ -293,16 +297,17 @@ a {
 .slider__layout{
     position: relative;
     width: 100%;
-    height: 576px;
+    height: 400px;
     margin: 0 auto;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 .slider .slider__icon{
     position: relative;
     max-width: 1010px;
     margin: 0 auto;
-    bottom: 100px;
+    bottom: 50px;
     text-align: right;
 }
 .swiper-pagination-clickable span {
@@ -310,8 +315,8 @@ a {
     vertical-align: middle;
     content: '';
     background: #155391;
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     margin-left: 7px;
     opacity: 1;
@@ -402,7 +407,7 @@ a {
     margin: 0 auto;
     background: #a6a6a6 url("../pic/what-backgraund.jpg")no-repeat;
     background-size: cover;
-    padding-top: 43px;
+    padding: 43px 6px 0 6px;
 }
 .what__content{
     max-width: 1010px;
@@ -421,13 +426,13 @@ a {
     color: #fff;
     text-align: center;
     line-height: 22px;
-    font-size: 13px;
+    font-size: 15px;
     padding: 0 5px 15px 5px;
     white-space: pre-line;
 }
 .what__medal{
     text-align: center;
-    margin-bottom: 56px;
+    margin-bottom: 111px;
 }
 .what__medal img{
     margin: 0 10px;
@@ -505,9 +510,6 @@ a {
 }
 .what__content ul .what__item:nth-child(even)>span{
     left: 8px;
-}
-.what__content ul .what__item:first-child{
-    margin-top: -25px;
 }
 .what__content ul .what__item:nth-child(odd) .what__item-title{
     margin-right: 147px;
@@ -732,13 +734,14 @@ a {
     text-decoration: line-through;
     margin-bottom: 15px;
 }
-.price-new span:nth-child(3){
+.price-new span:nth-child(3) {
     display: inline-block;
     vertical-align: middle;
     font-weight: 700;
-    color:#ffc001;
-    font-size: 130px;
+    color: #ffc001;
+    font-size: 65px;
     margin-bottom: 15px;
+    padding-left: 76px;
 }
 .price-new span:nth-child(4){
     display: inline-block;
@@ -896,72 +899,77 @@ a {
     max-width: 1920px;
     margin: 0 auto;
 }
-.profitably__wrap{
+.profitably__wrap {
     position: relative;
     width: 100%;
-    display: table;
+    display: block;
 }
-.profitably__wrap:before{
+.profitably__wrap .profitably__item:first-child{
+padding: 40px 6px 123px 6px;
+}
+.profitably__wrap .profitably__item:last-child{
+    padding:120px 6px 40px 6px;
+    margin-bottom: 20px;
+}
+.profitably__wrap .profitably__item:last-child:before {
     content: "";
     position: absolute;
     left: 50%;
     margin-left: -95px;
-    bottom: 145px;
+    top: -97px;
     width: 190px;
-    height:190px;
+    height: 190px;
     border: 3px solid #ffde18;
     border-radius: 50%;
     background: #ee9b0e;
 }
-.profitably__wrap:after{
+.profitably__wrap .profitably__item:last-child:after {
     content: "";
     position: absolute;
     left: 50%;
     margin-left: -225px;
-    bottom: 95px;
+    top: -290px;
     width: 451px;
-    height:451px;
+    height: 451px;
     background: url("../img/profitably-icon.png") no-repeat center;
-    background-size:contain;
+    background-size: contain;
 }
-.profitably__item{
-    padding-top: 30px;
-    width: 50%;
-    display: table-row;
+.profitably__item {
+    position: relative;
+    padding: 70px 6px 83px 6px;
+    width: 100%;
+    display: inline-block;
     vertical-align: top;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.profitably__item p{
-    font-size: 24px;
+.profitably__item p {
+    font-size: 20px;
     color: #fff;
     margin-bottom: 20px;
-    width: 474px;
-    padding-left: 53px;
+    width: 100%;
+    padding: 0 6px;
 }
-.profitably__bad li,
-.profitably__good li{
+.profitably__bad li, .profitably__good li {
     position: relative;
-    font-size: 24px;
+    font-size: 20px;
     color: #fff;
-    margin-bottom: 36px;
+    margin-bottom: 22px;
     padding-left: 50px;
-    white-space: pre-line;
+    /* white-space: pre-line; */
 }
-.profitably__bad{
+.profitably__bad {
     position: relative;
-    width: 500px;
-    float: right;
-    margin-bottom: 250px;
+    width: 100%;
+    margin-bottom: 143px;
 }
-.profitably__good{
+.profitably__good {
     position: relative;
-    width: 450px;
-    margin-bottom: 250px;
+    width: 100%;
+    margin-bottom: 143px;
 }
-.profitably__good:after,
-.profitably__bad:after{
+.profitably__good:after, .profitably__bad:after {
     content: "";
     bottom: -125px;
     left: 50%;
@@ -971,18 +979,17 @@ a {
     position: absolute;
     background: url("../img/profitably-arrow.png") no-repeat center;
 }
-.profitably__bad li:before{
+.profitably__bad li:before {
     content: "";
     top: -7px;
     left: 10px;
     width: 35px;
-    height:35px;
+    height: 35px;
     position: absolute;
     background: #fff;
     border-radius: 50%;
-    
 }
-.profitably__bad li:after{
+.profitably__bad li:after {
     content: "";
     width: 20px;
     height: 19px;
@@ -992,22 +999,22 @@ a {
     background: url("../img/profitably-bad.png") no-repeat center;
     background-size: contain;
 }
-.profitably__good li:before{
+.profitably__good li:before {
     content: "";
-    width: 35px;
-    height:35px;
-    top: -7px;
+    width: 25px;
+    height: 25px;
+    top: -6px;
     left: 10px;
     position: absolute;
     background: #f9c800;
     border-radius: 50%;
     border: 3px solid #ffdb02;
 }
-.profitably__good li:after{
+.profitably__good li:after {
     content: "";
     width: 27px;
-    top: 6px;
-    left: 18px;
+    top: 1px;
+    left: 13px;
     height: 19px;
     position: absolute;
     background: url("../img/profitably-good.png") no-repeat center;
@@ -1023,35 +1030,73 @@ a {
     margin-bottom: 20px;
 }
 .order__item {
+    width: 100%;
+    display: block;
+    position: relative;
     height: 87px;
     text-align: center;
+    padding-top: 13px;
 }
-.order__wrap ul .order__item:nth-child(even){
+.order__wrap ol .order__item:nth-child(even){
     background:#ffc001;
 }
-.order__wrap ul .order__item:nth-child(odd){
+.order__wrap ol .order__item:nth-child(odd){
     background:#2356a4;
 }
-.order__item img {
+.order__pic{
+    position: relative;
     width: 60px;
-    padding-top: 8px;
+    height: 60px;
     display: inline-block;
     vertical-align: middle;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 .order__item span {
-    display: inline-block;
+    position: relative;
+    display:  inline-block;
     vertical-align: middle;
     color: #fff;
     font-size: 18px;
     margin: 0 5px;
 }
 .order__item p{
-    max-width: 180px;
-    display: inline-block;
+    width: 180px;
+    display:  inline-block;
     vertical-align: middle;
     font-size: 13px;
     text-align: left;
     color:#fff
+}
+.order__wrap ol li{
+    color: #fff;
+    font-size: 18px;
+}
+.order__wrap ol{
+    counter-reset: list 0;
+}
+.order__wrap ol li:nth-child(even) .order__pic{
+    margin-right: 35px;
+}
+.order__wrap ol li:nth-child(even) .order__pic:before{
+    counter-increment: list;
+    content: counter(list) "";
+    position: absolute;
+    font-size: 25px;
+    top: 19px;
+    left: 67px;
+}
+.order__wrap ol li:nth-child(odd) .order__pic{
+    margin-left: 35px;
+}
+.order__wrap ol li:nth-child(odd) .order__pic:before{
+    counter-increment: list;
+    content: counter(list) "";
+    position: absolute;
+    font-size: 25px;
+    top: 18px;
+    left: -28px;
 }
 /* --------------- /order --------------- */
 
@@ -1158,22 +1203,38 @@ a {
         margin: 0 21px;
     }
     .order__item p{
-        max-width: 470px;
+        width: 470px;
         font-size: 24px;
     }
-    .order__item img {
-        padding-top: 10px;
-        width: inherit;
-        height: inherit;
+    .order__pic {
+       width: 150px;
+       height: 150px;
     }
     .order__item {
         height: 198px;
+        padding-top: 22px;
+    }
+    .order__wrap ol li:nth-child(even) .order__pic{
+        margin-right: 85px;
+    }
+    .order__wrap ol li:nth-child(even) .order__pic:before{
+        font-size: 36px;
+        top: 57px;
+        left: 176px;
+    }
+    .order__wrap ol li:nth-child(odd) .order__pic{
+        margin-left: 85px;
+    }
+    .order__wrap ol li:nth-child(odd) .order__pic:before{
+        font-size: 36px;
+        top: 57px;
+        left: -45px;
     }
     /* --------------- /order --------------- */
 
     /* --------------- site__header --------------- */
     .site__header {
-        height: 150px;
+        height: 172px;
     }
     .header-title {
         width: 290px;
@@ -1184,7 +1245,7 @@ a {
     .block-descr{
         font-size: 24px;
         line-height: 26px;
-        margin-bottom: 35px;
+        margin-bottom: 34px;
     }
     .header-title span:first-child {
         font-size: 24px;
@@ -1262,58 +1323,14 @@ a {
     }
     /* --------------- /what-problems --------------- */
 
-    /* --------------- what --------------- */
-    .what{
+    /* --------------- what__item --------------- */
+    .what__wrap {
+        padding: 66px 6px 0 6px;
     }
     .what__item {
-        width: 350px;
+        width: 330px;
     }
-    .what__content ul{
-        background: url("../img/what-line.png") no-repeat 50% 24%;
-        background-size: 214px 849px;
-        padding-bottom: 130px;
-        margin-bottom: 40px;
-    }
-    .what__item-title span:first-child {
-        font-size: 24px;
-    }
-    .what__item-title span:last-child {
-        font-size: 18px;
-    }
-    .what__item-pic {
-        width: 151px;
-        height: 136px;
-    }
-    .what__content ul .what__item:nth-child(odd){
-        margin-top: -52px;
-    }
-    .what__content ul .what__item:nth-child(odd) {
-        margin-right: 157px;
-    }
-    .what__content ul .what__item:nth-child(odd) .what__item-title {
-        margin-right: 167px;
-    }
-    .what__item-pic{
-        position: absolute;
-        width: 118px;
-        height: 121px;
-        bottom: 0;
-        right: 0;
-    }
-    .what__item>span{
-        right: 8px;
-        bottom: 9px;
-    }
-    .what__wrap p{
-        line-height: 33px;
-        font-size: 18px;
-        padding: 0 5px 20px 5px;
-    }
-    .what__content ul .what__item:nth-child(even){
-        margin-top: 69px;
-    }
-
-    /* --------------- /what --------------- */
+    /* --------------- /what__item --------------- */
 
     /* --------------- how-does --------------- */
     .how-does__price>div {
@@ -1324,6 +1341,11 @@ a {
     }
     .how-does__price>div p {
         text-align: left;
+    }
+    .price-new span:nth-child(3){
+        font-size: 130px;
+        margin-bottom: 15px;
+        padding-left: 0;
     }
     .how-does__video {
         margin-bottom: 60px;
@@ -1407,6 +1429,25 @@ a {
     }
     /* --------------- /how-does --------------- */
 
+    /* --------------- profitably --------------- */
+    .profitably__bad li, .profitably__good li {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    .profitably__item p {
+        font-size: 24px;
+        text-align: center;
+        padding: 0 170px;
+    }
+    .profitably__bad,
+    .profitably__good {
+        position: relative;
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 143px;
+    }
+    /* --------------- /profitably --------------- */
+
     /* --------------- question --------------- */
     .question-feedback ul li {
         font-size: 24px;
@@ -1419,21 +1460,9 @@ a {
 
 @media (min-width: 1024px) {
 
-    /* --------------- order --------------- */
-    .order {
-        margin-bottom: 70px;
-    }
-    .order__wrap ul .order__item:nth-child(even) div{
-        padding-left: 250px;
-    }
-    .order__wrap ul .order__item:nth-child(odd) div{
-        padding-right: 250px;
-    }
-    /* --------------- /order --------------- */
-
     /* --------------- menu --------------- */
     .menu {
-        top: 84px;
+        top: 100px;
     }
     .menu__btn {
         display: none;
@@ -1459,18 +1488,44 @@ a {
         width: 100%;
     }
     .site__header {
-        height: 209px;
+        padding-top: 18px;
+        height: 185px;
     }
     .call {
         position: absolute;
         right: 0;
-        top: 32px;
+        top: 48px;
         width: inherit;
     }
     .menu a {
         text-decoration: underline;
     }
     /* --------------- /menu --------------- */
+
+    /* --------------- order --------------- */
+    .order__wrap ol .order__item:nth-child(odd) p {
+        text-align: right;
+    }
+    .order__wrap ol .order__item:nth-child(odd) {
+        padding-right:333px;
+    }
+    .order__wrap ol .order__item:nth-child(even) {
+        padding-left: 333px;
+    }
+    /* --------------- /order --------------- */
+
+    /* --------------- slider --------------- */
+    .slider__layout {
+        height: 576px;
+        background-size: auto;
+    }
+    .slider__ban {
+        display: block;
+    }
+    .slider .slider__icon {
+        bottom: 48px;
+    }
+    /* --------------- /slider --------------- */
 
     /* --------------- what-problems --------------- */
     .what-problems {
@@ -1482,9 +1537,59 @@ a {
     /* --------------- /what-problems --------------- */
 
     /* --------------- what --------------- */
-    .what {
-
+    .what{
     }
+    .what__item {
+        width: 350px;
+    }
+    .what__content ul{
+        background: url("../img/what-line.png") no-repeat 50% 24%;
+        background-size: 214px 849px;
+        padding-bottom: 130px;
+        margin-bottom: 40px;
+    }
+    .what__content ul .what__item:first-child{
+        margin-top: -25px;
+    }
+    .what__item-title span:first-child {
+        font-size: 24px;
+    }
+    .what__item-title span:last-child {
+        font-size: 18px;
+    }
+    .what__item-pic {
+        width: 151px;
+        height: 136px;
+    }
+    .what__content ul .what__item:nth-child(odd){
+        margin-top: -52px;
+    }
+    .what__content ul .what__item:nth-child(odd) {
+        margin-right: 157px;
+    }
+    .what__content ul .what__item:nth-child(odd) .what__item-title {
+        margin-right: 167px;
+    }
+    .what__item-pic{
+        position: absolute;
+        width: 118px;
+        height: 121px;
+        bottom: 0;
+        right: 0;
+    }
+    .what__item>span{
+        right: 8px;
+        bottom: 9px;
+    }
+    .what__wrap p{
+        line-height: 24px;
+        font-size: 18px;
+        padding: 0 5px 25px 5px;
+    }
+    .what__content ul .what__item:nth-child(even){
+        margin-top: 55px;
+    }
+
     /* --------------- /what --------------- */
 
     /* --------------- how-does --------------- */
@@ -1587,9 +1692,73 @@ a {
     /* --------------- profitably__item--------------- */
     .profitably__item {
         display: table-cell;
+        width: 50%;
+    }
+    .profitably__wrap .profitably__item:first-child {
+        padding: 40px 6px 40px 6px;
+    }
+    .profitably__wrap .profitably__item:last-child {
+        padding: 40px 6px 40px 6px;
+        margin-bottom: 20px;
+    }
+    .profitably__wrap .profitably__item:first-child p{
+        margin: 0 60px 0 auto;
+    }
+    .profitably__wrap .profitably__item:last-child p{
+        margin: 0 auto 0 60px;
+    }
+    .profitably__item p {
+        text-align: left;
+        padding: 0;
+        width: 350px;
     }
     .profitably__wrap {
+        display: table;
         margin-bottom: 100px;
+    }
+    .profitably__bad, .profitably__good {
+        position: relative;
+        width: 432px;
+        min-height: 550px;
+    }
+    .profitably__bad{
+        margin-right: 45px;
+    }
+    .profitably__good {
+        margin-left: 45px;
+    }
+    .profitably__wrap .profitably__item:last-child:before,
+    .profitably__wrap .profitably__item:last-child:after {
+        display: none;
+    }
+    .profitably__wrap .profitably__bad:before {
+        content: "";
+        position: absolute;
+        right: -150px;
+        bottom: -199px;
+        width: 190px;
+        height: 190px;
+        border: 3px solid #ffde18;
+        border-radius: 50%;
+        background: #ee9b0e;
+        z-index: 1;
+    }
+    .profitably__wrap .profitably__good:before {
+        content: "";
+        position: absolute;
+        left: -278px;
+        bottom: -260px;
+        width: 451px;
+        height: 451px;
+        background: url("../img/profitably-icon.png") no-repeat center;
+        background-size: contain;
+        z-index: 1;
+    }
+    .profitably__good li:before {
+        width: 35px;
+        height: 35px;
+        top: -10px;
+        left: 5px;
     }
     /* --------------- /profitably__item --------------- */
 
