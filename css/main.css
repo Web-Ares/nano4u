@@ -42,11 +42,13 @@
     display: block;
     clear: both;
     width: 100%;
-    height: 222px;
+    height: 150px;
 }
 .site__content {
     position: relative;
     z-index: 2;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 .site__header {
     position: relative;
@@ -61,7 +63,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    height: 222px;
+    height: 150px;
 }
 .site__footer-layout {
     position: relative;
@@ -69,10 +71,10 @@
     margin: 0 auto;
     font-family:'Roboto Light', sans-serif;
     width: 100%;
-    height: 222px;
+    height: 150px;
     background: #fff;
     text-align: center;
-    padding-top: 51px;
+    padding-top: 31px;
     box-shadow: inset 0 3px 30px #cbcbcb;
 }
 .site__footer-layout span{
@@ -215,6 +217,116 @@ a {
 }
 /* --------------- /site__header--------------- */
 
+/* --------------- slider--------------- */
+.slider{
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.slider__ban{
+    position: absolute;
+    top: 0;
+    width: 1010px;
+    height: 576px;
+    left: 50%;
+    margin-left: -505px;
+    z-index: 4;
+}
+.ban__item{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 424px;
+    height: 576px;
+    background: rgba(196, 196, 195, 0.87);
+    padding-top: 30px;
+    text-align: center;
+    z-index: 3;
+}
+.ban__item>span{
+    display: block;
+    font-family: 'Roboto Light', sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 16px;
+}
+.ban__item h2{
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: 'Roboto Black', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.ban__item h3{
+    font-size: 20px;
+    font-family: 'Roboto Black', sans-serif;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+.slider__ban-pic{
+    display: block;
+    margin: 0 auto;
+    width:250px;
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 13px;
+}
+.slider__ban-pic div{
+    transform: rotate(15deg);
+    padding-left: 104px;
+    padding-top: 15px;
+}
+.slider__ban-pic div span:first-child{
+    display: block;
+    color: #000;
+    font-size: 24px;
+    line-height: 32px;
+    text-decoration: line-through;
+}
+.slider__ban-pic div span:last-child{
+    display: block;
+    color:#ffe300;
+    font-size: 36px;
+    font-weight: 700;
+}
+.slider__layout{
+    position: relative;
+    width: 100%;
+    height: 576px;
+    margin: 0 auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.slider .slider__icon{
+    position: relative;
+    max-width: 1010px;
+    margin: 0 auto;
+    bottom: 100px;
+    text-align: right;
+}
+.swiper-pagination-clickable span {
+    display: inline-block;
+    vertical-align: middle;
+    content: '';
+    background: #155391;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin-left: 7px;
+    opacity: 1;
+}
+.swiper-pagination-clickable span:hover {
+    background: #f2a800;
+    border: 2px solid #ffde14;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #f2a800 !important;
+    border: 2px solid #ffde14;
+}
+/* --------------- /slider --------------- */
+
 /* --------------- what-problems --------------- */
 .what-problems{
     position: relative;
@@ -225,7 +337,7 @@ a {
 .what-problems__item{
     display: inline-block;
     vertical-align: top;
-    width: 223px;
+    width: 280px;
     text-align: center;
     margin: 0 20px 20px 20px;
 }
@@ -270,20 +382,20 @@ a {
 .what:before{
     content: '';
     position: absolute;
-    bottom: 0px;
-    right: 0px;
-    border: 135px solid transparent;
-    border-bottom: 29px solid #fff;
-    border-right: 560px solid #fff;
+    bottom: 0;
+    right: 0;
+    border: 122px solid transparent;
+    border-bottom: 17px solid #fff;
+    border-right: 860px solid #fff;
 }
 .what:after{
     content: '';
     position: absolute;
-    bottom: 0px;
-    left: 0px;
-    border: 135px solid transparent;
-    border-bottom: 29px solid #fff;
-    border-left: 560px solid #fff;
+    bottom: 0;
+    left: 0;
+    border: 122px solid transparent;
+    border-bottom: 17px solid #fff;
+    border-left: 860px solid #fff;
 }
 .what__wrap{
     max-width: 1920px;
@@ -300,12 +412,10 @@ a {
     color: #fff;
     white-space: pre-line;
 }
-.what__content ul{
+.what__content ul {
     text-align: center;
-    background: url("../img/what-line.png") no-repeat 50% 24%;
-    background-size: 214px 849px;
-    padding-bottom: 130px;
-    margin-bottom: 40px;
+    padding-bottom: 200px;
+    margin-bottom: -92px;
 }
 .what__wrap p {
     color: #fff;
@@ -323,18 +433,18 @@ a {
     margin: 0 10px;
 }
 .what__item{
-    width: 350px;
+    width: 280px;
     height: 158px;
     position: relative;
     display: inline-block;
     vertical-align: top;
 }
-.what__item-pic{
+.what__item-pic {
     position: absolute;
-    width: 151px;
-    height: 136px;
-    bottom: 0;
-    right: 0;
+    width: 118px;
+    height: 121px;
+    bottom: 21px;
+    right: 11px;
 }
 .what__item-pic img{
     width: 100%;
@@ -360,20 +470,20 @@ a {
 }
 .what__item-title span:first-child{
     display: block;
-    font-size: 24px;
+    font-size: 15px;
     text-transform: uppercase;
 }
 .what__item-title span:last-child{
     display: block;
-    font-size: 18px;
+    font-size: 12px;
     white-space: pre-line;
 }
-.what__item>span{
+.what__item>span {
     position: absolute;
     text-align: center;
     padding-top: 8px;
-    right: 8px;
-    bottom: 9px;
+    right: 19px;
+    bottom: 31px;
     width: 40px;
     height: 40px;
     color: #fff;
@@ -388,7 +498,7 @@ a {
 }
 .what__content ul .what__item:nth-child(even) .what__item-title{
     text-align: left;
-    margin-left: 167px;
+    margin-left: 137px;
 }
 .what__content ul .what__item:nth-child(even) .what__item-pic{
    left: 0;
@@ -396,18 +506,11 @@ a {
 .what__content ul .what__item:nth-child(even)>span{
     left: 8px;
 }
-.what__content ul .what__item:nth-child(odd){
-     margin-right: 157px;
-    margin-top: -52px;
- }
-.what__content ul .what__item:nth-child(even){
-    margin-top: 69px;
-}
 .what__content ul .what__item:first-child{
     margin-top: -25px;
 }
 .what__content ul .what__item:nth-child(odd) .what__item-title{
-    margin-right: 167px;
+    margin-right: 147px;
 }
 /* --------------- /what --------------- */
 
@@ -422,6 +525,12 @@ a {
     width: 100%;
     height: auto;
     margin-bottom: 30px;
+}
+.how-does__video a:hover{
+    opacity: 0.8;
+}
+.how-does__video a:hover .play-video{
+    box-shadow: 0 0 10px #000;
 }
 .how-does__video img{
     width: 100%;
@@ -439,12 +548,16 @@ a {
     background: #000;
     opacity: 0.5;
     border-radius: 10px;
+    transition: box-shadow .3s ease;
+}
+.play-video:hover{
+    box-shadow: 0 0 10px #000;
 }
 .play-video:before{
     content: '';
     position: absolute;
-    bottom: 9px;
-    right: 7px;
+    bottom: 10px;
+    right: 6px;
     border: 5px solid transparent;
     border-left: 7px solid #fff;
 }
@@ -519,7 +632,6 @@ a {
     margin-top: -40px;
     display: none;
 }
-
 .how-does__consumption:before,
 .how-does__consumption:after {
     content: "";
@@ -562,18 +674,19 @@ a {
     display: block;
     line-height: 14px;
 }
-.how-does__price{
+.how-does__price {
     position: relative;
     max-width: 1010px;
     margin: 0 auto;
     text-align: center;
+    margin-bottom: 25px;
 }
 .how-does__price>div{
     display: inline-block;
     vertical-align: top;
     width: 300px;
 }
-.how-does__price>div:last-child{
+.how-does__video-list{
     box-shadow: 0 0 10px #000;
 }
 .how-does__price>div p{
@@ -585,7 +698,7 @@ a {
 .how-does__price>div>p>span{
     color: #ffc001;
 }
-.how-does__price>div>div{
+.video-list__item{
     position: relative;
     padding: 0;
     width: 50%;
@@ -593,6 +706,12 @@ a {
     height: 125px;
     background-position: center;
     background-size: cover;
+}
+.video-list__item:hover{
+    opacity: 0.8;
+}
+.video-list__item:hover .play-video{
+    box-shadow: 0 0 10px #000;
 }
 .how-does__price>div .price-new{
     width: 309px;
@@ -628,10 +747,9 @@ a {
     transform: rotate(-90deg);
     margin-left: -10px;
 }
-
 /* --------------- /how-does --------------- */
 
-/* --------------- site__header --------------- */
+/* --------------- site__header menu --------------- */
 .menu.active .menu__btn > span {
     background: transparent;
 }
@@ -770,9 +888,9 @@ a {
     background: url("../img/header-phone_h.png") no-repeat center;
     background-size: contain;
 }
-/* --------------- /site__header --------------- */
+/* --------------- /site__header menu --------------- */
 
-/* --------------- /site__header --------------- */
+/* --------------- profitably --------------- */
 .profitably{
     position: relative;
     max-width: 1920px;
@@ -895,13 +1013,14 @@ a {
     background: url("../img/profitably-good.png") no-repeat center;
     background-size: contain;
 }
-/* --------------- /site__header --------------- */
+/* --------------- /profitably --------------- */
 
 /* --------------- order --------------- */
 .order{
     position: relative;
     max-width: 1920px;
     margin: 0 auto;
+    margin-bottom: 20px;
 }
 .order__item {
     height: 87px;
@@ -913,23 +1032,20 @@ a {
 .order__wrap ul .order__item:nth-child(odd){
     background:#2356a4;
 }
-.order__item div{
-    text-align: center;
-}
-.order__item div img {
+.order__item img {
     width: 60px;
     padding-top: 8px;
     display: inline-block;
     vertical-align: middle;
 }
-.order__item div span {
+.order__item span {
     display: inline-block;
     vertical-align: middle;
     color: #fff;
     font-size: 18px;
     margin: 0 5px;
 }
-.order__item div p{
+.order__item p{
     max-width: 180px;
     display: inline-block;
     vertical-align: middle;
@@ -945,7 +1061,7 @@ a {
     text-align: center;
     background: url("../img/question-bg.png")no-repeat;
     background-position: 22% 113px;
-    padding-bottom: 80px;
+    padding-bottom: 10px;
 }
 .question-feedback ul{
     font-family: 'Roboto Light', sans-serif;
@@ -963,18 +1079,89 @@ a {
 }
 /* --------------- /question --------------- */
 
+/* --------------- delivery --------------- */
+.delivery{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.map{
+    max-width: 1010px;
+    margin: 0 auto;
+    position: relative;
+}
+.map__pic{
+    width: 100%;
+    height: 190px;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: contain;
+    margin-bottom: 20px;
+}
+.delivery ul{
+    margin-bottom: 30px;
+}
+.delivery__item{
+    width: 150px;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 20px;
+    text-align: center;
+    background: #5d80b7;
+    opacity: 0.7;
+    border-radius: 5px;
+    padding: 6px;
+    font-size: 14px;
+    color: #fff;
+    white-space: pre-line;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.delivery__title{
+    width: 181px;
+    height: 89px;
+    margin: 0 auto;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: contain;
+    margin-bottom: 10px;
+}
+.delivery__all-town{
+    width: 181px;
+    margin: 0 auto;
+    background: #ffc001;
+    padding: 10px 0;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.delivery__mail span{
+    display: block;
+    margin-bottom: 20px;
+    color: #000;
+}
+/* --------------- /delivery--------------- */
+
 @media (min-width: 768px){
 
+    /* --------------- map --------------- */
+    .map__pic {
+        height: 300px;
+        margin-bottom: 33px;
+    }
+    /* --------------- /map --------------- */
+
     /* --------------- order --------------- */
-    .order__item div span{
+    .order__item span{
         font-size: 36px;
         margin: 0 21px;
     }
-    .order__item div p{
+    .order__item p{
         max-width: 470px;
         font-size: 24px;
     }
-    .order__item div img {
+    .order__item img {
         padding-top: 10px;
         width: inherit;
         height: inherit;
@@ -1010,6 +1197,16 @@ a {
     }
     .site__footer-layout span {
         font-size: 24px;
+    }
+    .site__footer {
+        height: 222px;
+    }
+    .site:after {
+        height: 222px;
+    }
+    .site__footer-layout {
+        height: 222px;
+        padding-top: 51px;
     }
     .call {
         width: initial;
@@ -1067,28 +1264,66 @@ a {
 
     /* --------------- what --------------- */
     .what{
-
+    }
+    .what__item {
+        width: 350px;
+    }
+    .what__content ul{
+        background: url("../img/what-line.png") no-repeat 50% 24%;
+        background-size: 214px 849px;
+        padding-bottom: 130px;
+        margin-bottom: 40px;
+    }
+    .what__item-title span:first-child {
+        font-size: 24px;
+    }
+    .what__item-title span:last-child {
+        font-size: 18px;
+    }
+    .what__item-pic {
+        width: 151px;
+        height: 136px;
+    }
+    .what__content ul .what__item:nth-child(odd){
+        margin-top: -52px;
+    }
+    .what__content ul .what__item:nth-child(odd) {
+        margin-right: 157px;
+    }
+    .what__content ul .what__item:nth-child(odd) .what__item-title {
+        margin-right: 167px;
+    }
+    .what__item-pic{
+        position: absolute;
+        width: 118px;
+        height: 121px;
+        bottom: 0;
+        right: 0;
+    }
+    .what__item>span{
+        right: 8px;
+        bottom: 9px;
     }
     .what__wrap p{
         line-height: 33px;
         font-size: 18px;
         padding: 0 5px 20px 5px;
     }
+    .what__content ul .what__item:nth-child(even){
+        margin-top: 69px;
+    }
+
     /* --------------- /what --------------- */
 
     /* --------------- how-does --------------- */
     .how-does__price>div {
         width: 375px;
     }
-    .how-does__price>div>div {
+    .video-list__item {
         height: 200px;
     }
     .how-does__price>div p {
         text-align: left;
-    }
-
-    .how-does{
-
     }
     .how-does__video {
         margin-bottom: 60px;
@@ -1177,12 +1412,13 @@ a {
         font-size: 24px;
     }
     .question {
-        background-position: 100% 120px;
+        padding-bottom: 80px;
     }
     /* --------------- /question --------------- */
 }
 
 @media (min-width: 1024px) {
+
     /* --------------- order --------------- */
     .order {
         margin-bottom: 70px;
@@ -1235,19 +1471,22 @@ a {
         text-decoration: underline;
     }
     /* --------------- /menu --------------- */
-    /* --------------- site --------------- */
-    /* --------------- /site --------------- */
+
     /* --------------- what-problems --------------- */
     .what-problems {
 
     }
+    .what-problems__item {
+        width: 223px;
+    }
     /* --------------- /what-problems --------------- */
+
     /* --------------- what --------------- */
     .what {
 
     }
-
     /* --------------- /what --------------- */
+
     /* --------------- how-does --------------- */
     .how-does {
 
@@ -1258,7 +1497,7 @@ a {
     .how-does__price>div {
         width: 475px;
     }
-    .how-does__price>div>div {
+    .video-list__item{
         height: 255px;
     }
     .how-does__price>div:first-child {
@@ -1270,81 +1509,64 @@ a {
     .how-does__wrap {
         background-size: 626px 474px;
     }
-
     .how-does__item {
         font-size: 24px;
     }
-
     .how-does__item b {
         font-size: 72px;
     }
-
     .how-does__wrap {
         height: 500px;
     }
-
     .how-does__wrap > div {
         width: 626px;
         height: 474px;
     }
-
     .item_1 {
         top: 106px;
         left: -390px;
     }
-
     .item_2 {
         left: -118px;
         top: -118px;
     }
-
     .item_3 {
         right: 100px;
         top: 116px;
     }
-
     .item_4 {
         left: 0px;
         bottom: 91px;
     }
-
     .how-does__item span {
         display: inline-block;
         vertical-align: middle;
     }
-
     .how-does__consumption {
         max-width: 1010px;
         height: 107px;
     }
-
     .how-does__consumption div {
         padding-left: 12px;
         padding-top: 16px;
     }
-
     .how-does__consumption img {
         width: 40px;
         margin-top: -80px;
     }
-
     .how-does__consumption div span {
         font-size: 24px;
         margin-right: 19px;
     }
-
     .how-does__consumption div span b {
         font-size: 72px;
     }
-
     .how-does__consumption .consumption-size {
         font-size: 60px;
     }
-
     .how-does__consumption div p span {
         line-height: 32px;
     }
-
     .how-does__consumption:before,
     .how-does__consumption:after {
         content: "";
@@ -1354,11 +1576,9 @@ a {
         height: 106px;
         z-index: 1;
     }
-
     .how-does__consumption:after {
         left: -39px;
     }
-
     .how-does__consumption:before {
         right: -39px;
         /* --------------- /how-does --------------- */
@@ -1372,4 +1592,57 @@ a {
         margin-bottom: 100px;
     }
     /* --------------- /profitably__item --------------- */
+
+    /* --------------- delivery --------------- */
+    .map__pic {
+        width: 1005px;
+        margin: 0 auto;
+        position: relative;
+        height: 522px;
+        margin-bottom: 33px;
+    }
+    .delivery__item{
+        position: absolute;
+    }
+    .delivery__item:nth-child(1) {
+        left: 10px;
+        top: 140px;
+    }
+    .delivery__item:nth-child(2){
+        left: 194px;
+        top: 188px;
+    }
+    .delivery__item:nth-child(3){
+        left: 212px;
+        top: 265px;
+    }
+    .delivery__item:nth-child(4){
+        left: 288px;
+        top: 321px;
+    }
+    .delivery__item:nth-child(5){
+        bottom: 81px;
+        left: 453px;
+    }
+    .delivery__item:nth-child(6){
+        left: -19px;
+        bottom: 241px;
+    }
+    .delivery__item:nth-child(7){
+        left: 28px;
+        bottom: 157px;
+    }
+    .delivery__item:nth-child(8){
+        bottom: 101px;
+        left: 95px;
+    }
+    .delivery__item:nth-child(9){
+        bottom: 83px;
+        left: 259px;
+    }
+    .delivery__item:nth-child(10){
+        bottom: 9px;
+        left: 389px;
+    }
+    /* --------------- /delivery --------------- */
 }
